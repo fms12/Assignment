@@ -1,5 +1,7 @@
 recording : https://www.awesomescreenshot.com/video/16055212?key=bede11938e52b1d576cd5a8df78960ee
 
+https://drive.google.com/file/d/19rOvrbuRAQJ8qaznLCqYxMBnN__piMKw/view?usp=sharing
+
 # Assignment
   - create customer 
   - create operator
