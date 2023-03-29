@@ -1,3 +1,5 @@
+recording : https://www.awesomescreenshot.com/video/16055212?key=bede11938e52b1d576cd5a8df78960ee
+
 # Assignment
   - create customer 
   - create operator
