@@ -1,0 +1,71 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+{% include 'accounts/status.html' %}
+<style>
+
+ h5 {
+    color: white;
+}
+</style>
+
+<div class="row">
+	<div class="col-md-5">
+		<h5>CUSTOMERS DETAILS:</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a>
+			<table class="table table-sm">
+				<tr>
+					<th>ID</th>
+					<th>Customer</th>
+					<th>phone</th>
+					<th>addres</th>
+
+					
+				</tr>
+				{% for customer in customers %}
+				 <tr>
+					<td>{{customer.id}}</td>
+					<td>{{customer.name}}</td>
+					<td>{{customer.phone}}</td>
+					<td>{{customer.location}}</td>
+					
+    			</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5>LAST 5 BOOKING</h5>
+		<hr>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Customer Name</th>
+					<th>Drone</th>
+					<th>Booking date</th>
+					<th>Booking location</th>
+					<th>Status</th>
+				</tr>
+				{% for customer in customers %}
+					<td>{{customer.name}}</td>
+				{% endfor %}
+				{% for i in booking  %}
+						<td>{{i.drone}}</td>
+						<td>{{i.booking_date}}</td>
+						<td>{{i.location}}</td>
+						<td>{{i.status}}</td>
+						{% comment %} <td> <a class='btn btn-sm btn-primary' href="{% url 'update_order' i.id %}">UPDATE</a> </td>
+						<td> <a class='btn btn-sm btn-danger' href="{% url 'delete_order' i.id %}">DELETE</a> </td> {% endcomment %}
+						</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock content %}
